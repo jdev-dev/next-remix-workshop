@@ -8,22 +8,26 @@ import { TagsListType } from "../domain/entity/tags.schemas";
 const ArticleTagsApi: ArticlesTagsRepositoryI = {
     useGetAllArticles: () => {
         const {data: response, error: isError, isLoading} = 
+        // useSWR(
+        //     `${SERVER_BASE_URL}${ENDPOINTS.ARTICLES}`, () =>
+        //     fetcher<ArticleListResponseType>(`${SERVER_BASE_URL}${ENDPOINTS.ARTICLES}`)
+        //     );
         useSWR(
-            `${SERVER_BASE_URL}${ENDPOINTS.ARTICLES}`, 
-            fetcher
+            `${SERVER_BASE_URL}${ENDPOINTS.TAGS}`, 
+            fetcher<ArticleListResponseType>
             );
 
         return {
             response,
             isError,
-            isLoading,
+            isLoading: !response && !isError,
         } as ResponseReturnType<ArticleListResponseType>;
     },
     useGetTags: () => {
         const {data: response, error: isError, isLoading} =
         useSWR(
             `${SERVER_BASE_URL}${ENDPOINTS.TAGS}`, 
-            fetcher
+            fetcher<TagsListType>
             );
 
         return {

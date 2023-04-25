@@ -1,4 +1,5 @@
 import axios from "axios";
+import { url } from "inspector";
 
 export const SERVER_BASE_URL = `https://api.realworld.io/api`;
 
@@ -20,6 +21,14 @@ export async function fetcher<T>(url:string) {
   const { data } = await axios.get<T>(url);
   return data;
 }
+
+// export async function fetcher<T = any>(url: string): Promise<T> {
+//   const response = await fetch(url);
+//   if (!response.ok) {
+//     throw new Error('An error occurred while fetching the data.');
+//   }
+//   return response.json();
+// }
 
 export const getQuery = (limit: number, page: number): string =>
     `limit=${limit}&offset=${page ? page * limit : 0}`;
