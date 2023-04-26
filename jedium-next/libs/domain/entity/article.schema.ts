@@ -1,13 +1,13 @@
-export type ArticleListResponseType = {
+export interface ArticleListResponseType {
     articles: SingleArticleType[],
     articlesCount: number
 };
 
-export type SingleArticleResponseType = {
+export interface SingleArticleResponseType {
     article: SingleArticleType;
 }
 
-export type SingleArticleType = {
+export interface SingleArticleType {
     tagList: string[];
     createdAt: string;
     author: AuthorType;
@@ -20,7 +20,7 @@ export type SingleArticleType = {
     favorited: boolean;
 };
 
-export type AuthorType = {
+export interface AuthorType {
     username: string;
     bio: string;
     image: string;
