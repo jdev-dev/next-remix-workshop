@@ -13,14 +13,15 @@ const ArticleTagsApi: ArticlesTagsRepositoryI = {
         //     fetcher<ArticleListResponseType>(`${SERVER_BASE_URL}${ENDPOINTS.ARTICLES}`)
         //     );
         useSWR(
-            `${SERVER_BASE_URL}${ENDPOINTS.TAGS}`, 
+            `${SERVER_BASE_URL}${ENDPOINTS.ARTICLES}`, 
             fetcher<ArticleListResponseType>
             );
 
         return {
             response,
             isError,
-            isLoading: !response && !isError,
+            isLoading,
+            //isLoading: !response && !isError,
         } as ResponseReturnType<ArticleListResponseType>;
     },
     useGetTags: () => {
