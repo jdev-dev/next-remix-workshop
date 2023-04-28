@@ -1,5 +1,5 @@
 import type { ReactElement } from "react";
-import type { ArticleType } from "libs/domain/entity/article.schema";
+import type { ArticleType } from "~/domain/entity/article.schema";
 import { Link } from "@remix-run/react";
 import Paginator from "./paginator.component";
 

@@ -2,7 +2,7 @@ import { Link } from "@remix-run/react";
 import { ReactElement } from "react";
 import { ArticleListType } from "~/domain/entity/article-list.schema";
 import Paginator from "./paginator.component";
-import { ArticleType } from "libs/domain/entity/article.schema";
+import { ArticleType } from "~/domain/entity/article.schema";
 
 type ArticleListProps = {
   articles: ArticleType[],

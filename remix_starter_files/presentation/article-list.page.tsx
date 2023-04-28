@@ -1,6 +1,6 @@
 import type { ReactElement } from "react";
 import ArticleListPreview from "./article-list-preview/article-list-preview.container";
-import type { ArticleType } from "libs/domain/entity/article.schema";
+import type { ArticleType } from "~/domain/entity/article.schema";
 
 type ArticleListProps = {
   articles: ArticleType[],

@@ -1,4 +1,4 @@
-import type { ArticleType } from "libs/domain/entity/article.schema";
+import type { ArticleType } from "~/domain/entity/article.schema";
 import Actions from "./article-actions.component";
 import Header from "./article-header.component";
 import Body from "./article-body.components";

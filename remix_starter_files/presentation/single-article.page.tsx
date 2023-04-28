@@ -1,4 +1,4 @@
-import type { ArticleType } from "libs/domain/entity/article.schema";
+import type { ArticleType } from "~/domain/entity/article.schema";
 import type { CommentType} from "~/domain/entity/comments.schema";
 import Article from "./article/article.container";
 import Comments from "./commments/comments.container";

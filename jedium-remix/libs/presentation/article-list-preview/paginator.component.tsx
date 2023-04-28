@@ -34,8 +34,3 @@ export default function Paginator({
             {...grid}
         </Card>
     }
-
-    return <div className="flex m-6 place-items-center">
-        {createGrid(calcNumberOfPages(articlesCount))}
-    </div>
-}

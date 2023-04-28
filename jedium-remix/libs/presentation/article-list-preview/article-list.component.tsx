@@ -1,13 +1,3 @@
-import type { ReactElement } from "react";
-import type { ArticleType } from "libs/domain/entity/article.schema";
-import { Link } from "@remix-run/react";
-import Paginator from "./paginator.component";
-import Card from "libs/shared/ui/card.component";
-
-type ArticleListProps = {
-  articles: ArticleType[],
-  articleCount: number,
-}
 
 export default function ArticleList({
   articles,
