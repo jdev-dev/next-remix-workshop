@@ -1,3 +1,5 @@
+import TagsResolver from "@/libs/application/tags.resolver";
+import Tags from "@/libs/presentation/articles/tags-preview.component";
 import Banner from "@/libs/presentation/home/banner.component";
 import MainView from "@/libs/presentation/home/main-view.component";
 import Head from "next/head";
@@ -14,7 +16,7 @@ const Articles = ( ) => (
                 <MainView />
                 <div className="col-md-3">
                     <div className="sidbar">Popular Tagas
-                        {/* <Tags /> */ }
+                        <TagsResolver  />
                     </div>
                 </div>
             </div>

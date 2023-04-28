@@ -1,3 +1,3 @@
 export type TagsLIstType = {
-    tags: string;
+    tags: string[];
 }
