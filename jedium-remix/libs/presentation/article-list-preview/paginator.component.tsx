@@ -1,5 +1,6 @@
 import { Link } from "@remix-run/react";
 import { ENDPOINTS, setQueryParams } from "libs/shared/api/endpoints";
+import Card from "libs/shared/ui/card.component";
 import type { ReactElement } from "react";
 
 
@@ -29,9 +30,9 @@ export default function Paginator({
                 <span className="mx-1 px-1 border">{i + 1}</span>
             </Link>)
         }
-        return <div className="place-items-center border border-emerald-500">
+        return <Card className="place-items-center hover:border-stone-400">
             {...grid}
-        </div>
+        </Card>
     }
 
     return <div className="flex m-6 place-items-center">

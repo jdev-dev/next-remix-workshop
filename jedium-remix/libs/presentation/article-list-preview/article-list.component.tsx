@@ -15,7 +15,7 @@ export default function ArticleList({
 }: ArticleListProps): ReactElement {
   return (<>
     {articles.map((article, idx) => (
-      <Card key={`${article.slug}${idx}`}>
+      <Card className={`hover:border-orange-500`} key={`${article.slug}${idx}`}>
         <div className="article-preview" key={article.slug}>
           <div className="article-meta">
             <Link to={`/author/${article.author.username}`}>

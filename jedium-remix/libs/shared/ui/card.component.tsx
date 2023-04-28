@@ -1,5 +1,6 @@
-export default function Card({children}) {
-    return <div style={{border: '1px lightgreen solid', borderRadius: '5px', margin: '5px 0', padding: '5px'}} >
+export default function Card({ children, className }) {
+
+    return <div className={`border my-5 p-5 rounded-md border-teal-400 ${className}`}>
         {children}
     </div>
 }

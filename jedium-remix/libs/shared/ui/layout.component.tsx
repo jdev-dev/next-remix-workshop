@@ -1,6 +1,7 @@
 import { Link } from "@remix-run/react";
 import type { ReactElement } from "react";
 import Header from "./header.component";
+import Card from "./card.component";
 
 type LayoutProps = {
   children: JSX.Element;
@@ -30,7 +31,7 @@ export default function Layout({
                   <a className="nav-link" href="/">
                     Global Feed
                   </a>
-                </li><Link>{children}</Link>
+                </li>
                 {tag && (
                   <li className="nav-item">
                     <span className="nav-link active">#{tag}</span>
@@ -42,6 +43,7 @@ export default function Layout({
           </div>
           <div className="col-md-3">
             <div className="sidebar">
+              <Card className={`hover:border-purple-500`}>
               <p>Popular Tags</p>
               <div className="tag-list">
                 {tags.map((tag) => (
@@ -54,6 +56,7 @@ export default function Layout({
                   </Link>
                 ))}
               </div>
+              </Card>
             </div>
           </div>
         </div>
