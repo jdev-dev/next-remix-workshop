@@ -34,5 +34,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# next-remix 
 node_modules
 .next
+build
+.env
+*.db
